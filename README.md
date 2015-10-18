@@ -1,1 +1,1 @@
-Wiznet W7500 project template
+Wiznet W7500 Modbus/TCP slave
