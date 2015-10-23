@@ -1,11 +1,11 @@
-/** @file mb_register.h
+/** 
+ * @file mb_register.h
  *
  * Modbus register related function prototypes and definitions
- *
  */
 
-#ifndef SRC_INCLUDE_MB_REGISTER_H_
-#define SRC_INCLUDE_MB_REGISTER_H_
+#ifndef _MB_REGISTER_H
+#define _MB_REGISTER_H
 
 #include "mb_common.h"
 
@@ -105,4 +105,4 @@ mb_retval_t mb_register_holding_read_multiple(uint16_t addr, uint16_t nwords, ui
  * @param dst		pointer to memory where values are to be read from, most significant byte/bit first
  */
 mb_retval_t mb_register_holding_write_multiple(uint16_t addr, uint16_t nwords, uint8_t *src);
-#endif /* SRC_INCLUDE_MB_REGISTER_H_ */
+#endif /* _MB_REGISTER_H */

@@ -5,32 +5,32 @@
  *
  */
 
-#ifndef SRC_INCLUDE_MB_COMMON_H_
-#define SRC_INCLUDE_MB_COMMON_H_
+#ifndef _MB_COMMON_H
+#define _MB_COMMON_H
 
 #include <stdint.h>
 
 typedef enum {
-	MB_SUCCESS,
-	MB_ERR_ADDRESS
+    MB_SUCCESS,
+    MB_ERR_ADDRESS
 } mb_retval_t;
 
 typedef union {
-	uint16_t u16;
-	uint8_t u8[2];
+    uint16_t u16;
+    uint8_t u8[2];
 } mb_word_t;
 
 typedef struct {
-	uint8_t function_code;
-	uint8_t data[252];
+    uint8_t function_code;
+    uint8_t data[252];
 } mb_pdu_t;
 
 typedef struct {
-	mb_word_t transaction_id;
-	mb_word_t protocol_id;
-	mb_word_t length;
-	uint8_t   unit_id;
-	mb_pdu_t  pdu;
+    mb_word_t transaction_id;
+    mb_word_t protocol_id;
+    mb_word_t length;
+    uint8_t   unit_id;
+    mb_pdu_t  pdu;
 } mb_tcp_adu_t;
 
 /* Class 0 commands */
@@ -61,4 +61,4 @@ typedef struct {
 
 
 
-#endif /* SRC_INCLUDE_MB_COMMON_H_ */
+#endif /* _MB_COMMON_H */
